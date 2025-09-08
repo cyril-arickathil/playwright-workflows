@@ -134,10 +134,10 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: `cd ${SERVER_PATH} && npm start`,
-    url: 'http://localhost:4200',
-    reuseExistingServer: true,
-    timeout: 5 * 60_1000   //5 minutes (1000ms = 1sec , 1000*60=60secs(1min))
-  },
+  // webServer: {
+  //   command: `cd ${SERVER_PATH} && npm start`,
+  //   url: 'http://localhost:4200',
+  //   reuseExistingServer: true,
+  //   timeout: 5 * 60_1000   //5 minutes (1000ms = 1sec , 1000*60=60secs(1min))
+  // },
 });
