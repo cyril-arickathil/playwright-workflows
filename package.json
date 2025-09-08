@@ -1,0 +1,32 @@
+{
+  "name": "test-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "show-report": "npx playwright show-report",
+    "ui": "npx playwright test --ui",
+    "usingPage": "npx playwright test  --grep @regression",
+    "run api": "npx playwright test --project=API",
+    "run staging": "npx playwright test --project=staging",
+    "qa": "cross-env ENV=qa npx playwright test --headed --project=chromium useFixtures.spec.ts:3",
+    "local": "npx playwright test ENV=local --headed --project=chromium",
+    "pageObjects": "npx playwright test usePageObjects.spec.ts --headed && npx playwright show-test-report",
+    "allure": "playwright test --reporter=line,allure-playwright",
+    "allure-generate": "allure generate allure-results -o allure-report --clean",
+    "allure-open": "allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "^1.55",
+    "@types/node": "^24.1.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.2.1"
+  }
+}
